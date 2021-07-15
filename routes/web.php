@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/test/jenkins', function () {
-    return 'ci is triggered...........';
+    return 'ci is triggered................';
 });
