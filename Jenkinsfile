@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               bat 'php artisan optimize' 
+               
                bat 'php artisan serve --port=9999'
             }
         }
