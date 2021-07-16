@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'curl -sS https://getcomposer.org/installer | php'
+                sh '/usr/local/bin/composer install'
             }
         }
         stage('init') {
