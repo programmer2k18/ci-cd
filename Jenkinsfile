@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat '/usr/local/bin/composer install'
+                bat 'composer install'
             }
         }
         stage('init') {
