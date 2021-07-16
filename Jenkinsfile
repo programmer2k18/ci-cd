@@ -4,17 +4,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'composer install'
             }
+        }
+        stage('init') {
+            steps {
+                sh 'php artisan key:generate'      
+            }    
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'vendor/bin/phpunit tests/Feature'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+               sh 'php artisan serve --port=9999'
             }
         }
     }
