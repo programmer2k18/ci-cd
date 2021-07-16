@@ -20,6 +20,8 @@ Route::get('/', function () {
 Route::get('/test/jenkins', function () {
     return 'ci is triggered again...............';
 });
+
+
 Route::get('/test2/jenkins', function () {
     return 'ci is triggered again...............';
 });
