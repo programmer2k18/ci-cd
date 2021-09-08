@@ -26,11 +26,6 @@ pipeline {
                 bat 'vendor/bin/phpunit tests/Feature'
             }
         }
-        stage('Deploy') {
-            steps {
-               
-               bat 'php artisan serve --port=9999'
-            }
-        }
+        
     }
 }
